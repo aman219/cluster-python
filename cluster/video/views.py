@@ -34,7 +34,6 @@ def generate_thumbnail(url, out):
         .run(capture_stdout=True, capture_stderr=True)
     )
 
-
 def svideo(request, id):
     video = Video.objects.get(pk=id)
     obj = {"src": video.video.url, "name": video.name, "id":video.id}
