@@ -28,7 +28,7 @@ def generate_thumbnail(url, out):
     (
         ffmpeg
         .input(url, ss=1)
-        .filter('scale', 1250, 720)
+        .filter('scale', 1280, 720)
         .output(out, vframes=1)
         .overwrite_output()
         .run(capture_stdout=True, capture_stderr=True)
