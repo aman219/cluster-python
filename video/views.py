@@ -3,7 +3,6 @@ from django.shortcuts import HttpResponse
 from .models import Video
 from django.views.decorators.csrf import csrf_exempt
 import json
-import ffmpeg
 import sys
 
 
