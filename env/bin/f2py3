@@ -1,4 +1,4 @@
-#!/home/aman/programming/django/env/bin/python3
+#!/home/aman/programming/python/project/cluster/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
