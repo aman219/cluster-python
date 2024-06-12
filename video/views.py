@@ -3,7 +3,6 @@ from django.shortcuts import HttpResponse
 from .models import Video
 from django.views.decorators.csrf import csrf_exempt
 import json
-import sys
 
 
 # Create your views here.
@@ -42,3 +41,8 @@ def svideo(request, id):
     video = Video.objects.get(pk=id)
     obj = {"src": video.video.url, "name": video.name, "id":video.id}
     return HttpResponse(json.dumps(obj))
+
+def deleteVideo(request, id):
+    video = Video.objects.get(pk=id)
+    video.delete();
+    return HttpResponse("Deleted Successfully")

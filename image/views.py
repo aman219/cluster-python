@@ -16,3 +16,8 @@ def image(reqest):
         for img in imgs:
             obj.append({"src":img.image.url, "name":img.name})
         return HttpResponse(json.dumps(obj))
+    
+def deleteImage(request, id):
+    img = Image.objects.get(pk=id)
+    img.delete()
+    return HttpResponse("Deleted successfully")

@@ -20,7 +20,11 @@ def audio(reqest):
         return HttpResponse(json.dumps(obj))
 
 def paly(reqest, id):
-    print(id)
     audio = Audio.objects.get(pk=id)
     obj = {"name": audio.name, "src":audio.audio_file.url, "id":audio.id}
     return HttpResponse(json.dumps(obj))
+
+def deleteAudio(request, id):
+    audio = Audio.objects.get(pk=id)
+    audio.delete()
+    return HttpResponse("Successfully deleted audio")
