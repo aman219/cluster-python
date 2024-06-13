@@ -2,6 +2,11 @@
 ### A backend for web NAS (Network Attached Server) written in python. It use Django framework as backend for managing server resources.
 
 ## Steps to run server :-
+
+```
+python -m venv env
+```
+
 ```
 source env/bin/activate
 ```
