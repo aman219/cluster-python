@@ -1,6 +1,10 @@
 # cluster
 ### A backend for web NAS (Network Attached Server) written in python. It use Django framework as backend for managing server resources.
 
+## Dependencies 
+1. [Cluster front](https://github.com/aman219/cluster-front).
+2. ffmpeg
+
 ## Steps to run server :-
 
 ```
